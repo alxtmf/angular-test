@@ -1,10 +1,5 @@
 import { Component } from "@angular/core";
-export interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-  date?: any;
-}
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -13,9 +8,15 @@ export interface Todo {
 export class AppComponent {
   title = "Test component";
 
-  public todos: Todo[] = [
-    { id: 1, title: "121", completed: false },
-    { id: 2, title: "122", completed: false },
-    { id: 3, title: "123", completed: false }
-  ];
+  //public todos: Todo[] = [
+  //  { id: 1, title: "121", completed: false, date: new Date() },
+  //  { id: 2, title: "122", completed: true, date: new Date() },
+  //  { id: 3, title: "123", completed: false }
+  //];
+
+  //onToggle(id: number) {
+  //  console.log(id);
+  //  const index = this.todos.findIndex((e) => e.id === id);
+  //  this.todos[index].completed = !this.todos[index].completed;
+  //}
 }

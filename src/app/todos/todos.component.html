@@ -1,8 +1,13 @@
 <ul>
-  <li *ngFor="let todo of todos; let i = index">
-    <input type="checkbox" />
+  <li *ngFor="let todo of todosService.todos; let i = index">
+    <input
+      type="checkbox"
+      [checked]="todo.completed"
+      (change)="onChange(todo.id)"
+    />
     <strong>{{i + 1}}</strong>
     {{todo.title}}
     <button class="rm">&times;</button>
+    <strong>{{todo.date | date:'medium'}}</strong>
   </li>
 </ul>
